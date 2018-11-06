@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/movie-recommender-system-web-app/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "29389ef80faadcc500cf87429093bad7",
+    "revision": "fc7c3eea32082c009aeb41f105fd517d",
     "url": "/movie-recommender-system-web-app/index.html"
   }
 ];
