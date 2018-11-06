@@ -2,42 +2,29 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
 
-class App extends Component {
+class App extends React.Component {
+    constructor(props) {
+        super(props);
 
-    searchMovie(movieName) {
+        this.state = {
+            data: "Initial data..."
+        }
+        this.updateState = this.updateState.bind(this);
+    }
+    
+    updateState(e) {
+        this.setState({data: e.target.value});
     }
 
     render() {
         return (
             <div>
-                <h1> Hello World! </h1>
-                <SearchBar searchMovie={this.searchMovie.bind(this)}/>
-            </div>
-    );
-}
-}
-
-class SearchBar extends React.Component {
-    constructor() {
-        this.movieName = "";
-    }
-
-    render({searchMovie}) {
-        return (
-            <div>
-                <input ref={node => {
-                    this.movieName = node;
-                }} />
-                <button onClick={() => {
-                    searchMovie(this.movieName);
-                    this.movieName.value = "";
-                }}>
-                Search
-                </button>
+                <input type = "text" value = {this.state.data}
+                    onChange = {this.updateState} />
+                <h4>{this.state.data}</h4>
             </div>
         );
     }
 }
-
 
 export default App;
