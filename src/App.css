@@ -30,3 +30,25 @@
     transform: rotate(360deg);
   }
 }
+
+table.myTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td.myTable {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th.myTable {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even).myTable {
+    background-color: #dddddd;
+}

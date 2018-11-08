@@ -13,9 +13,9 @@ class App extends React.Component {
             data: [],
             search: ""
         }
+
         for(var i = 0; i < Movies.length; i++) {
-            this.state.data.push(
-                {"id": i + 1, "movie": Movies[i]})
+            this.state.data.push({"id": i + 1, "movie": Movies[i]});
         }
 
         this.updateState = this.updateState.bind(this);
@@ -28,7 +28,7 @@ class App extends React.Component {
 
     searchMovie() {
         let data = [ ];
-        var index = 1
+        let index = 1
         for(var i = 0; i < Movies.length; i++) {
             if(Movies[i].includes(this.state.search)) {
                 data.push({"id": index, "movie": Movies[i]});
@@ -50,10 +50,11 @@ class App extends React.Component {
                 <button onClick={this.searchMovie}>
                 Search
                 </button>
-                <table>
+                <table className="myTable">
                     {this.state.data.map(
                         (dynamicComponent, i) =>
-                            <Content key = {i} componentData={dynamicComponent}/>)}
+                            <Content key = {i}
+                                componentData = {dynamicComponent}/>)}
                 </table>
             </div>
         );
@@ -61,42 +62,18 @@ class App extends React.Component {
 }
 
 class Content extends React.Component {
-    renderOdd() {
-        return (
-            <div>
-                <tr>
-                    <th> {this.props.key} </th>
-                    <td>
-                        <span>
-                        {this.props.componentData}
-                        <br />
-                        </span>
-                    </td>
-                </tr>
-            </div>
-        );
-    }
-    renderEven() {
-        return (
-            <div>
-                <tr>
-                    <td> {this.props.key} </td>
-                    <td>
-                        <span>
-                        {this.props.componentData}
-                        <br />
-                        </span>
-                    </td>
-                </tr>
-            </div>
-        );
+    constructor(props) {
+        super(props);
     }
     render() {
-        if(this.props.key % 2 == 0) {
-            return(this.renderEven());
-        } else {
-            return(this.renderOdd());
-        }
+        return (
+            <div>
+                <tr className="myTable">
+                    <td className="myTable"> {this.props.componentData.id} </td>
+                    <td className="myTable"> {this.props.componentData.movie} </td>
+                </tr>
+            </div>
+        );
     }
 }
 
