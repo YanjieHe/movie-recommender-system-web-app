@@ -51,7 +51,7 @@ class App extends React.Component {
                 <button onClick={this.searchMovie}>
                 Search
                 </button>
-                <table>
+                <table width="100%">
                     {this.state.data.map(
                         (dynamicComponent, i) =>
                             <Content key = {i}
@@ -79,7 +79,7 @@ class Content extends React.Component {
         } else {
             return (
                 <div>
-                    <tr styles="background-color: #dddddd">
+                    <tr bgcolor="#dddddd">
                         <td> {this.props.componentData.id} </td>
                         <td> {this.props.componentData.movie} </td>
                     </tr>
