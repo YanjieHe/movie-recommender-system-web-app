@@ -44,6 +44,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                 <img src="https://images6.alphacoders.com/590/thumb-1920-590933.jpg" alt="Interstellar"> 
                 <input value={this.state.search}
                     onChange = {this.updateState}
                     ref="myInput">
@@ -71,8 +72,8 @@ class Content extends React.Component {
             return (
                 <div>
                     <tr>
-                        <td> {this.props.componentData.id} </td>
-                        <td> {this.props.componentData.movie} </td>
+                        <td width="20px"> {this.props.componentData.id} </td>
+                        <td width="99%"> {this.props.componentData.movie} </td>
                     </tr>
                 </div>
             );
@@ -80,8 +81,8 @@ class Content extends React.Component {
             return (
                 <div>
                     <tr bgcolor="#dddddd">
-                        <td> {this.props.componentData.id} </td>
-                        <td> {this.props.componentData.movie} </td>
+                        <td width="20px"> {this.props.componentData.id} </td>
+                        <td width="99%"> {this.props.componentData.movie} </td>
                     </tr>
                 </div>
             );
