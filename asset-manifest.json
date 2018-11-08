@@ -1,13 +1,13 @@
 {
-  "main.css": "/movie-recommender-system-web-app/static/css/main.9cc1a031.chunk.css",
-  "main.js": "/movie-recommender-system-web-app/static/js/main.72071b17.chunk.js",
-  "main.js.map": "/movie-recommender-system-web-app/static/js/main.72071b17.chunk.js.map",
+  "main.css": "/movie-recommender-system-web-app/static/css/main.22536aea.chunk.css",
+  "main.js": "/movie-recommender-system-web-app/static/js/main.aefe4e30.chunk.js",
+  "main.js.map": "/movie-recommender-system-web-app/static/js/main.aefe4e30.chunk.js.map",
   "static/js/1.4ac9fc17.chunk.js": "/movie-recommender-system-web-app/static/js/1.4ac9fc17.chunk.js",
   "static/js/1.4ac9fc17.chunk.js.map": "/movie-recommender-system-web-app/static/js/1.4ac9fc17.chunk.js.map",
   "runtime~main.js": "/movie-recommender-system-web-app/static/js/runtime~main.70f80fc6.js",
   "runtime~main.js.map": "/movie-recommender-system-web-app/static/js/runtime~main.70f80fc6.js.map",
-  "static/css/main.9cc1a031.chunk.css.map": "/movie-recommender-system-web-app/static/css/main.9cc1a031.chunk.css.map",
+  "static/css/main.22536aea.chunk.css.map": "/movie-recommender-system-web-app/static/css/main.22536aea.chunk.css.map",
   "index.html": "/movie-recommender-system-web-app/index.html",
-  "precache-manifest.06e006540a8d767c979974b68269840c.js": "/movie-recommender-system-web-app/precache-manifest.06e006540a8d767c979974b68269840c.js",
+  "precache-manifest.9738b151ee2e394ed21c8d2d5395d999.js": "/movie-recommender-system-web-app/precache-manifest.9738b151ee2e394ed21c8d2d5395d999.js",
   "service-worker.js": "/movie-recommender-system-web-app/service-worker.js"
 }
