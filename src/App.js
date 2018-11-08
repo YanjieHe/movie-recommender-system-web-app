@@ -14,7 +14,8 @@ class App extends React.Component {
             search: ""
         }
         for(var i = 0; i < Movies.length; i++) {
-            this.state.data.push([i + 1, Movies[i]])
+            this.state.data.push(
+                {"id": i + 1, "movie": Movies[i]})
         }
 
         this.updateState = this.updateState.bind(this);
@@ -30,7 +31,7 @@ class App extends React.Component {
         var index = 1
         for(var i = 0; i < Movies.length; i++) {
             if(Movies[i].includes(this.state.search)) {
-                data.push([index, Movies[i]]);
+                data.push({"id": index, "movie": Movies[i]});
                 index = index + 1
             }
         }
