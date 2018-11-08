@@ -51,7 +51,7 @@ class App extends React.Component {
                 </button>
                 <table>
                     {this.state.data.map(
-                        (i, dynamicComponent) =>
+                        (dynamicComponent, i) =>
                             <Content key = {i} componentData={dynamicComponent}/>)}
                 </table>
             </div>
