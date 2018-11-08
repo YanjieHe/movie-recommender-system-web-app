@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/movie-recommender-system-web-app/static/js/runtime~main.70f80fc6.js"
   },
   {
-    "revision": "d3ee5b0ec250a14320c8f6dac36f07b4",
+    "revision": "89164652e4331f661541cbc2be837f41",
     "url": "/movie-recommender-system-web-app/index.html"
   }
 ];
