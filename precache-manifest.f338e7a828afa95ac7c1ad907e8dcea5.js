@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "b7e9ada05e9bca38cb8a",
+    "revision": "334efde0489b47413dcc",
     "url": "/movie-recommender-system-web-app/static/css/main.9cc1a031.chunk.css"
   },
   {
-    "revision": "b7e9ada05e9bca38cb8a",
-    "url": "/movie-recommender-system-web-app/static/js/main.b7e9ada0.chunk.js"
+    "revision": "334efde0489b47413dcc",
+    "url": "/movie-recommender-system-web-app/static/js/main.334efde0.chunk.js"
   },
   {
     "revision": "4ac9fc171cd95dc5684e",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/movie-recommender-system-web-app/static/js/runtime~main.70f80fc6.js"
   },
   {
-    "revision": "23779b3e6afeedb540b34ac4e55d3053",
+    "revision": "0be0c9008da78afab2fc35858161a31a",
     "url": "/movie-recommender-system-web-app/index.html"
   }
 ];
