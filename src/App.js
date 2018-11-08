@@ -10,8 +10,11 @@ class App extends React.Component {
         super(props);
 
         this.state = {
-            data: Movies,
+            data: [],
             search: ""
+        }
+        for(var i = 0; i < Movies.length; i++) {
+            this.state.data.push([i + 1, Movies[i]])
         }
 
         this.updateState = this.updateState.bind(this);
@@ -24,9 +27,11 @@ class App extends React.Component {
 
     searchMovie() {
         let data = [ ];
+        var index = 1
         for(var i = 0; i < Movies.length; i++) {
             if(Movies[i].includes(this.state.search)) {
-                data.push(Movies[i]);
+                data.push([index, Movies[i]]);
+                index = index + 1
             }
         }
         alert("You searched movies with keyword: " + this.state.search)
@@ -46,7 +51,7 @@ class App extends React.Component {
                 </button>
                 <table>
                     {this.state.data.map(
-                        (dynamicComponent, i) =>
+                        (i, dynamicComponent) =>
                             <Content key = {i} componentData={dynamicComponent}/>)}
                 </table>
             </div>
