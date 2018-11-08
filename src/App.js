@@ -47,7 +47,7 @@ class App extends React.Component {
                 <table>
                     {this.state.data.map(
                         (dynamicComponent, i) =>
-                            <Content componentData={dynamicComponent}/>)}
+                            <Content key = {i} componentData={dynamicComponent}/>)}
                 </table>
             </div>
         );
@@ -55,10 +55,11 @@ class App extends React.Component {
 }
 
 class Content extends React.Component {
-    render() {
+    renderOdd() {
         return (
             <div>
                 <tr>
+                    <th> {this.props.key} </th>
                     <td>
                         <span>
                         {this.props.componentData}
@@ -68,6 +69,28 @@ class Content extends React.Component {
                 </tr>
             </div>
         );
+    }
+    renderEven() {
+        return (
+            <div>
+                <tr>
+                    <td> {this.props.key} </td>
+                    <td>
+                        <span>
+                        {this.props.componentData}
+                        <br />
+                        </span>
+                    </td>
+                </tr>
+            </div>
+        );
+    }
+    render() {
+        if(this.props.key % 2 == 0) {
+            return(this.renderEven());
+        } else {
+            return(this.renderOdd());
+        }
     }
 }
 
