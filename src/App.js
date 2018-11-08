@@ -4,6 +4,7 @@ import './App.css';
 import React from "react";
 import ReactDOM from "react-dom"
 import Movies from "./Movies.js";
+import ReactTable from "react-table";
 
 class App extends React.Component {
     constructor(props) {
@@ -50,7 +51,7 @@ class App extends React.Component {
                 <button onClick={this.searchMovie}>
                 Search
                 </button>
-                <table className="myTable">
+                <table>
                     {this.state.data.map(
                         (dynamicComponent, i) =>
                             <Content key = {i}
@@ -66,14 +67,25 @@ class Content extends React.Component {
         super(props);
     }
     render() {
-        return (
-            <div>
-                <tr className="myTable">
-                    <td className="myTable"> {this.props.componentData.id} </td>
-                    <td className="myTable"> {this.props.componentData.movie} </td>
-                </tr>
-            </div>
-        );
+        if(this.props.componentData.id % 2 == 0) {
+            return (
+                <div>
+                    <tr>
+                        <td> {this.props.componentData.id} </td>
+                        <td> {this.props.componentData.movie} </td>
+                    </tr>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <tr styles="background-color: #dddddd">
+                        <td> {this.props.componentData.id} </td>
+                        <td> {this.props.componentData.movie} </td>
+                    </tr>
+                </div>
+            );
+        }
     }
 }
 
