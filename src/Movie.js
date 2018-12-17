@@ -14,7 +14,7 @@ class Movie extends React.Component {
 
     render() {
         return (
-            <div class="card mb-3">
+            <div class="card mb-3" style={{"max-width": "15rem"}}>
                 <div class="card-body">
                     <h5 class="card-title">{movie_names[this.id].title}</h5>
                     <h6 class="card-subtitle text-muted">genres: {movie_names[this.id].genres.join(", ")}</h6>
