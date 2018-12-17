@@ -49,6 +49,8 @@ class App extends Component {
     render() {
         return (
             <div>
+                <h3> A Movie Recommender System </h3>
+                <hr className="my-4"/>
                 <table cellpadding="10px">
                     <tbody>
                     <tr>
@@ -56,130 +58,35 @@ class App extends Component {
                             {new Movie({id: this.state.movie_list[0], recommend: this.recommend}).render()}
                         </td>
                         <td>
-                            <button type="button" class="btn btn-primary btn-lg btn-block" onClick={this.myClick}>
-                                Randomly recommend me some movies!
-                            </button>
-                        </td>
-                        <td>
-                            {/*<form>*/}
-                                {/*<fieldset className="form-group">*/}
-                                    {/*<legend>Checkboxes</legend>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Action*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Adventure*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Animation*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Children's*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Comedy*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Crime*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Documentary*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Drama*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Fantasy*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Film-Noir*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Horror*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Musical*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Mystery*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Romance*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Sci-Fi*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Thriller*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> War*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                    {/*<div className="form-check">*/}
-                                        {/*<label className="form-check-label">*/}
-                                            {/*<input className="form-check-input" type="checkbox" value=""*/}
-                                                   {/*checked=""/> Western*/}
-                                        {/*</label>*/}
-                                    {/*</div>*/}
-                                {/*</fieldset>*/}
-                                {/*<button type="submit" className="btn btn-primary">Submit</button>*/}
-                            {/*</form>*/}
-                            <div className="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" className="btn btn-secondary" onClick={this.moveBack}>Previous
-                                </button>
-                                <button type="button" className="btn btn-secondary">Middle</button>
-                                <button type="button" className="btn btn-secondary">Next</button>
+                            <div className="col-lg-4">
+                                <div className="bs-component">
+                                    <h3> A Brief Introduction </h3>
+                                    <p>Welcome! The website you are browsing is a content-based movie recommender
+                                        system.</p>
+                                    <p>Usually, a movie recommender system recommend movies based on user ratings.
+                                        However, I built a recommender system based solely on the content of movies.
+                                        Namely, I solved the cold-start problem by utilizing the data collected from
+                                        movies themselves.</p>
+                                    <p>To make accurate and suprising recommendations, I extracted information from
+                                        movie trailers used methods in computer vision and audio analysis.
+                                        And also, I integrate centrality features of movies by applying social network
+                                        analysis.</p>
+                                    <p>
+                                        Enjoy!
+                                    </p>
+
+                                    <p> Best,<br/>
+                                        Yanjie He</p>
+
+                                    <button type="button" className="btn btn-primary btn-lg btn-block"
+                                            onClick={this.myClick}>
+                                        Randomly recommend me a movie!
+                                    </button>
+                                    <button type="button" className="btn btn-primary btn-lg btn-block"
+                                            onClick={this.moveBack}>
+                                        Return to the previous movie
+                                    </button>
+                                </div>
                             </div>
                         </td>
                     </tr>
@@ -194,11 +101,11 @@ class App extends Component {
                         style={
                             {
                                 "-webkit-column-gap":
-                                    "10px", /* Chrome, Safari, Opera */
+                                    "15px", /* Chrome, Safari, Opera */
                                 "-moz-column-gap":
-                                    "10px", /* Firefox */
+                                    "15px", /* Firefox */
                                 "column-gap":
-                                    "10px"
+                                    "15px"
                             }
                         }>
                         {
@@ -221,8 +128,7 @@ class App extends Component {
                             new Movie({id: this.state.movie_list[5], recommend: this.recommend}).render()
                         }
                     </div>
-                    <
-                        div
+                    <div
                         className="row"
                         style={
                             {
@@ -254,13 +160,11 @@ class App extends Component {
                             new Movie({id: this.state.movie_list[10], recommend: this.recommend}).render()
                         }
                     </div>
-                    <
-                    /section>
+                </section>
             </div>
-    )
-    ;
+        )
     }
-    }
+}
 
-    export default App
-    ;
+export default App
+;
