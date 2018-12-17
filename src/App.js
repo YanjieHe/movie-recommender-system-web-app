@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import summaries from './summaries.json'
+import movie_names from './movie_names.json'
 import './App.css'
 
 class App extends Component {
@@ -19,7 +20,7 @@ class App extends Component {
                                          width="182"
                                          src="./images/10323.jpg"/>
                                     <div className="container">
-                                        <h4><b>Spider Man</b></h4>
+                                        <h4><b>{movie_names[100050].title}</b></h4>
                                         <p>{summaries[100050]}</p>
                                     </div>
                                 </div>
@@ -30,7 +31,7 @@ class App extends Component {
                                          width="300px"
                                          src="./images/10323.jpg"/>
                                     <div className="container">
-                                        <h4><b>Spider Man</b></h4>
+                                        <h4><b>{movie_names[100050].title}</b></h4>
                                         <p>{summaries[100050]}</p>
                                     </div>
                                 </div>
@@ -41,7 +42,7 @@ class App extends Component {
                                          width="300px"
                                          src="./images/10323.jpg"/>
                                     <div className="container">
-                                        <h4><b>Spider Man</b></h4>
+                                        <h4><b>{movie_names[100050].title}</b></h4>
                                         <p>{summaries[100050]}</p>
                                     </div>
                                 </div>
