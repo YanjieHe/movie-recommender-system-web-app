@@ -10,6 +10,12 @@ class Movie extends React.Component {
     constructor(props) {
         super(props)
         this.id = props.id
+        this.recommend = props.recommend
+        this.recommendThisMovie = this.recommendThisMovie.bind(this)
+    }
+
+    recommendThisMovie() {
+        this.recommend(this.id)
     }
 
     render() {
@@ -19,7 +25,7 @@ class Movie extends React.Component {
                     <h5 class="card-title">{movie_names[this.id].title}</h5>
                     <h6 class="card-subtitle text-muted">genres: {movie_names[this.id].genres.join(", ")}</h6>
                 </div>
-                <img
+                <img onClick={this.recommendThisMovie}
                      alt={movie_names[this.id].title + " Poster"} title={movie_names[this.id].title + " Poster"}
                      src={"https://raw.githubusercontent.com/YanjieHe/movie-recommender-system-web-app/master/src/images/" + this.id + ".jpg"}/>
                 <div class="card-body">
