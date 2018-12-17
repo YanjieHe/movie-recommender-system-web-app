@@ -3,17 +3,30 @@ import summaries from './summaries.json'
 import movie_names from './movie_names.json'
 import './App.css'
 import Movie from "./Movie.js"
+
 class App extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {movie_list: [115645]}
+        this.myClick = this.myClick.bind(this)
+    }
+
     myClick() {
-        alert(Math.random() * 100)
+        var index = Math.floor(Math.random() * Object.keys(movie_names).length)
+        this.setState({movie_list: [Object.keys(movie_names)[index]]})
     }
 
     render() {
         return (
             <div>
                 <div className="container">
-                    {new Movie({id: 115645}).render()}
+                    <button onClick={this.myClick}>
+                        Randomly recommend me some movies!
+                    </button>
+                    {new Movie({id: this.state.movie_list[0]}).render()}
                     <table>
+                        <tbody>
                         <tr>
                             <td>
                                 {new Movie({id: 100050}).render()}
@@ -48,10 +61,8 @@ class App extends Component {
                                 {new Movie({id: 113972}).render()}
                             </td>
                         </tr>
+                        </tbody>
                     </table>
-                    <button onClick={this.myClick}>
-                        Click Me
-                    </button>
                 </div>
             </div>
         );
