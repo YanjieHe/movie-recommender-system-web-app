@@ -19,6 +19,7 @@ class App extends Component {
         movies.push(imdb_id)
         movies = movies.concat(neighbours[imdb_id])
         this.state = {movie_list: movies, record: [imdb_id]}
+        this.inputValue = ""
     }
 
     myClick() {
@@ -37,7 +38,6 @@ class App extends Component {
     }
 
     moveBack() {
-        console.log("try to move back")
         if (this.state.record.length > 1) {
             var imdb_id = this.state.record[this.state.record.length - 2]
             this.state.record.pop()
@@ -49,6 +49,7 @@ class App extends Component {
     render() {
         return (
             <div>
+                <br/>
                 <h3> A Movie Recommender System </h3>
                 <hr className="my-4"/>
                 <table cellpadding="10px">
@@ -63,13 +64,14 @@ class App extends Component {
                                     <h3> A Brief Introduction </h3>
                                     <p>Welcome! The website you are browsing is a content-based movie recommender
                                         system.</p>
-                                    <p>Usually, a movie recommender system recommend movies based on user ratings.
+                                    <p>
+                                        Usually, a movie recommender system recommends films based on user ratings.
                                         However, I built a recommender system based solely on the content of movies.
-                                        Namely, I solved the cold-start problem by utilizing the data collected from
+                                        Namely, I solved the cold-start problem by utilizing the data collected from the
                                         movies themselves.</p>
-                                    <p>To make accurate and suprising recommendations, I extracted information from
-                                        movie trailers used methods in computer vision and audio analysis.
-                                        And also, I integrate centrality features of movies by applying social network
+                                    <p>To make accurate and surprising recommendations, I extracted information from
+                                        movie trailers used methods in computer vision and audio analysis. And also, I
+                                        integrate centrality features of movies by applying social network
                                         analysis.</p>
                                     <p>
                                         Enjoy!
