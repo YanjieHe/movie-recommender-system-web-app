@@ -19,7 +19,6 @@ class App extends Component {
         movies.push(imdb_id)
         movies = movies.concat(neighbours[imdb_id])
         this.state = {movie_list: movies, record: [imdb_id]}
-        this.inputValue = ""
     }
 
     myClick() {
